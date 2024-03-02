@@ -6319,4 +6319,9 @@ button.tm-videobutton.tm-videobutton-lg span i {
   }
 }
 
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
