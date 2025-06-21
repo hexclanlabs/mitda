@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <marquee style="background-color: #0E8FE3;color: #fff; display: block;">MITDA AGM get-together on 2nd March at Hotel Moti Mahal Falnir</marquee>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>MITDA</title>
@@ -67,8 +66,16 @@
                     <div class="row align-items-center">
                         <div class="col-xl-8 col-lg-7 order-2 order-lg-1">
                             <div class="tm-heroslider-content">
-                                <h1>President's Message</h1>
-                                <p>MITDA AGM get-together on 2nd March at Hotel Moti Mahal Falnir</p>
+                                <div class="content-slide" style="display: block;">
+                                    <h1>Delight Meet – 2025</h1>
+                                    <p>🎉 Hosted by Canon - Delighting You Always</p>
+                                    <p>Join us on <strong>27th June 2025 at 6:30 PM onwards</strong> at Ocean Pearl, Navabharath Circle, Kodialbail, Mangalore – 575 003, Karnataka for an evening of networking and celebration.</p>
+                                </div>
+                                <div class="content-slide" style="display: none;">
+                                    <h1>Web Connect</h1>
+                                    <p>🌐 Hosted by RP tech, ASUS & Intel</p>
+                                    <p>Join us on <strong>25th June 2025 at 7:00 PM onwards</strong> at Hotel Deepa Comforts, M G Road, Mangaluru – 575003, Karnataka for an evening of networking and collaboration.</p>
+                                </div>
                                 <a href="#tm-area-features" class="tm-heroslider-scrolldown">
                                     <i class="zmdi zmdi-square-down"></i>
                                 </a>
@@ -76,8 +83,8 @@
                         </div>
                         <div class="col-xl-4 col-lg-5 order-1 order-lg-2">
                             <div class="tm-heroslider-mobileshow">
-                                <img src="assets/images/AGM.jpg" alt="Cricket Tournament"
-                                    style="border-radius: 30px;">
+                                <img class="slider-image" src="assets/images/Main-1.JPG" alt="Cricket Tournament" style="border-radius: 30px; display: block;">
+                                <img class="slider-image" src="assets/images/Main-2.JPG" alt="About MITDA" style="border-radius: 30px; display: none;">
                                 <div class="tm-heroslider-mobileshowanim">
                                     <span></span>
                                     <span></span>
@@ -87,6 +94,19 @@
                         </div>
                     </div>
                 </div>
+                <script>
+                    let currentSlide = 0;
+                    const slides = document.querySelectorAll('.content-slide');
+                    const images = document.querySelectorAll('.slider-image');
+                    
+                    setInterval(() => {
+                        slides[currentSlide].style.display = 'none';
+                        images[currentSlide].style.display = 'none';
+                        currentSlide = (currentSlide + 1) % 2;
+                        slides[currentSlide].style.display = 'block';
+                        images[currentSlide].style.display = 'block';
+                    }, 5000);
+                </script>
             </div>
         </div>
         <!--// Heroslider Area -->
